@@ -8,9 +8,9 @@ Requires CMake and a compiler that supports C++11.
 Prerequisites for Ubuntu 12.04:
 
 * gcc and g++ 4.8 (http://askubuntu.com/questions/271388/how-to-install-gcc-4-8-in-ubuntu-12-04-from-the-terminal)
+* Preinstalling SDL2.0: sudo apt install build-essential xorg-dev libudev-dev libts-dev libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev libopenal-dev libogg-dev libvorbis-dev libaudiofile-dev libpng12-dev libfreetype6-dev libusb-dev libdbus-1-dev zlib1g-dev libdirectfb-dev
 * SDL2.0 (http://www.libsdl.org/hg.php)
-** sudo apt install build-essential xorg-dev libudev-dev libts-dev libgl1-mesa-dev libglu1-mesa-dev libasound2-dev libpulse-dev libopenal-dev libogg-dev libvorbis-dev libaudiofile-dev libpng12-dev libfreetype6-dev libusb-dev libdbus-1-dev zlib1g-dev libdirectfb-dev
-* SDL\_Image 2.0 (http://www.libsdl.org/projects/SDL\_image/)
+* SDL\_Image 2.0 (http://www.libsdl.org/projects/SDL_image/)
 * SOIL (sudo apt-get install libsoil-dev)
 
 
