@@ -61,7 +61,7 @@ endif ()
 add_definitions(
   -DGLEW_STATIC # Add a define to prevent GLEW linker warnings
 )
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
 # Link aganst OpenGL and GLEW
 find_package(OpenGL REQUIRED)
@@ -93,12 +93,13 @@ if(MINGW OR UNIX OR ${CMAKE_SYSTEM_NAME} MATCHES "Linux") # *nix compliant
   endif(NOT SDL2_FOUND AND NOT SDL2IMAGE_FOUND)
 
   # Link the libraries
-  set(SIGMA_LIBS ${SIGMA_LIBS} ${SDL2_LIBRARY} ${SDL2IMAGE_LIBRARY} ${GLEW_LIBRARY} SDL2main)
+  set(SIGMA_LIBS ${SIGMA_LIBS} ${SDL2_LIBRARY} ${SDL2IMAGE_LIBRARY} ${GLEW_LIBRARY} /usr/local/lib/libSDL2main.a SOIL)
   link_libraries (
     ${SDL2_LIBRARY}
     ${SDL2IMAGE_LIBRARY} # if using SDL_image, obviously
     ${GLEW_LIBRARY} # FindGLEW.cmake set this variable
-    SDL2main # Sadly not included in SDL_LIBRARY variable
+    /usr/local/lib/libSDL2main.a # Sadly not included in SDL_LIBRARY variable
+    SOIL
   )
 
   set(IOPSYS "OS_SDL" CACHE STRING "Select the Op Sys you want to use")
